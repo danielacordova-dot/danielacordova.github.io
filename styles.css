@@ -80,3 +80,41 @@ ul li {
     to { transform: scale(1); opacity: 1; }
 }
 
+/* Contenedor que junta texto + foto */
+.sobre-mi-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Texto ocupa más espacio */
+.texto-sobre-mi {
+    width: 70%;
+}
+
+/* Foto a la derecha */
+.foto-sobre-mi img {
+    width: 150px;        /* tamaño ajustable */
+    height: auto;
+    border-radius: 10px; /* borde suave */
+    object-fit: cover;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+/* En pantalla de celular: se coloca arriba */
+@media (max-width: 768px) {
+    .sobre-mi-contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .texto-sobre-mi {
+        width: 100%;
+    }
+
+    .foto-sobre-mi img {
+        width: 200px;
+    }
+}
+
